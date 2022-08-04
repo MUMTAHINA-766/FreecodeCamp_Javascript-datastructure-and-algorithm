@@ -20,3 +20,18 @@ function getIndexToIns(arr, num) {
 }
 let output = getIndexToIns([10, 20, 40, 50], 30);
 
+//Another solution
+// function getIndexToIns(arr, num) {
+//   let belong = 0;
+//   for(let i = 0; i <arr.length; i++){
+//     if(arr[i]<num){
+//       belong++;
+//     }
+//   }
+//   console.log(belong);
+//   return belong;
+// }
+
+// getIndexToIns([10, 20, 40, 50], 30);
+
+
