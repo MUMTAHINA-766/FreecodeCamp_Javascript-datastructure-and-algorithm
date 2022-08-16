@@ -37,3 +37,14 @@ chunkArrayInGroups([0, 1, 2, 3, 4, 5, 6, 7, 8], 2);
 // }
 
 // chunkArrayInGroups(["a", "b", "c", "d","e","f","g"], 3);
+
+//3rd solution
+// function chunkArrayInGroups(arr, size) {
+// let bigArr = [];
+// for(let i=0; i<arr.length; i = i + size){
+// let subarr = arr.slice(i, i+size);
+// bigArr.push(subarr)
+// }
+// return bigArr;
+// }
+// chunkArrayInGroups(["a", "b", "c", "d","e","f","g"], 3);
