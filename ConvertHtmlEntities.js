@@ -1,4 +1,6 @@
+//my solution
 function convertHTML(str) {
+  console.log(str);
   let newStr = "";
   for(let i= 0; i<str.length; i++){
     if(str[i]=="&"){
@@ -24,14 +26,16 @@ function convertHTML(str) {
     }
     if(str[i]=="'"){
       newStr = str.replace(/'/g,'&apos;');
-     
     }
-    // if(str.includes("<"||">"||"'"||"&"||'"')==false){
-    //   return newStr = str;
-    // }
   }
   console.log(newStr);
-  return newStr;
+  return newStr|| str;
 }
 
-convertHTML("Hamburgers < Pizza > Tacos");
+convertHTML("Hamburgers Pizza Tacos");
+
+
+//solution 2
+
+
+//solution 3
