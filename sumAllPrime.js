@@ -1,26 +1,54 @@
-function sumPrimes(num) {
-  let arr = [];
-  let sum = 2;
-  if(num==2){
-    return num;
-  }
-  else if(num == 3){
-    return num+2;
-  }
-  if(num>3){
-  for(let i=4; i<=num; i++){
-    if(i%2!=0){
-      arr.push(i);
-      let n = (6*i)+1
-      if(arr.includes(n)==true){
-        console.log(n)
+const isPrime = (num) => {
+   let x = Math.floor(Math.sqrt(num));
+   let j = x;
+   while (j >= 2) {
+      if (num % j === 0) {
+         return false;
       }
-      console.log(i)
-    sum+=i;
-    }
-  }
+      j--;
+   }
+   return true;
+};
+function sumPrimes(num) {
+ let iter = num;
+   let sum = 0;
+   while (iter >= 2) {
+      if (isPrime(iter) === true) {
+         sum += iter;
+      }
+      iter--;
+   }
+   return sum;
 }
-console.log(arr)
- return sum+3;
-}
-console.log(sumPrimes(25));
+console.log(sumPrimes(10));
+
+//solve 2
+
+// function sumPrimes(num) {
+//   let sum=0;
+//   let counter=2;
+  
+//   while(counter<=num)
+//     {
+//       if(isPrimes(counter))
+//       {
+//         sum +=counter;
+//       }
+//       counter +=1;
+//     }
+//   return sum;
+// }
+// function isPrimes(isnumber)
+//   {
+//     let counter=2;
+//     while(counter<isnumber)
+//       {
+//         if(isnumber%counter===0)
+//         {
+//           return false;
+//         }
+//         counter +=1;
+//       }
+//     return true;
+//   }
+// console.log(sumPrimes(10));
